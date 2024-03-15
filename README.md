@@ -1,2 +1,0 @@
-# resumeTailorer
-resumetailorer
