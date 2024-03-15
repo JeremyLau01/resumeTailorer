@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 </head>
 <body>
+  <div id="longtop"></div>
+  <img src="{{ url_for('static', filename='css/J_logo.png') }}" alt="Jeremy's Tailorer Logo">
   <form action="greet" method="post">
     <input type="text" name="name_input" placeholder="Paste in your job description here!" id="longtext">
     <br>
