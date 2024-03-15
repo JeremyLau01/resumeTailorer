@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremy's Tailorer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+  <form action="greet" method="post">
+    <input type="text" name="name_input" placeholder="Paste in your job description here!" id="longtext">
+    <br>
+    <input type="submit" value="Tailor my resume!" id="greet">
+    <input type="submit" value="Copy Latex!" onclick="copyText()" id="copyTextButton">
+    <br>
+    <div id="latexOutput">
+      {% for item in data %}
+          {{ item }} <br>
+      {% endfor %}
+    </div>
+  </form>
+
+  <script>
+    function copyText() {
+        // Get the text from the button
+        var buttonText = document.getElementById("latexOutput").innerText;
+
+        // Create a textarea element to hold the text temporarily
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = buttonText;
+
+        // Append the textarea to the body
+        document.body.appendChild(tempTextArea);
+
+        // Select the text inside the textarea
+        tempTextArea.select();
+
+        // Execute the copy command
+        document.execCommand("copy");
+
+        // Remove the textarea from the body
+        document.body.removeChild(tempTextArea);
+
+        // Alert the user or do something else
+        //alert("Text copied: " + buttonText);
+    }
+</script>
+</body>
+
+</html>
