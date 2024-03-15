@@ -11,6 +11,15 @@ body{
   border: none;
 }
 
+#longtop{
+  height: 130px;
+
+}
+
+img{
+  width: 200px;
+}
+
 p{
   color: white;
   font-family: Shanti;
@@ -34,7 +43,7 @@ input:focus{
 }
 
 #greet {
-  background-color: palevioletred;
+  background-color: #F758A7;
   color: white;
   width: 180px;
 }
@@ -45,12 +54,12 @@ input:focus{
 }
 
 #copyTextButton {
-  background-color: peru;
+  background-color: rgb(236, 166, 36);
   color: white;
   width: 130px;
 }
 
 #copyTextButton:hover{
-  background-color: orange;
+  background-color: peru;
   cursor: pointer;
 }
