@@ -449,6 +449,8 @@ def add_languages():
       add_txt += "SQL"
     elif lang == "c#":
       add_txt += "C\#"
+    elif lang == "javascript":
+      add_txt += "JavaScript"
     else:
       add_txt += lang.capitalize()
     txt_languages += add_txt
